@@ -18,8 +18,8 @@ public class SagAccCn implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "CACN_CODIGO")
-	private String codigo;
+	@Column(name = "CACN_CACNcodigo")
+	private String CACNcodigo;
 	
 	@Column(name = "CACN_NOMBRE")
 	private String nombre;
@@ -40,12 +40,12 @@ public class SagAccCn implements Serializable{
 		this.id = id;
 	}
 	
-	public String getCodigo() {
-		return codigo;
+	public String getCACNcodigo() {
+		return CACNcodigo;
 	}
 
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
+	public void setCACNcodigo(String CACNcodigo) {
+		this.CACNcodigo = CACNcodigo;
 	}
 
 	public String getNombre() {

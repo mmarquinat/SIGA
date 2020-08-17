@@ -19,8 +19,8 @@ public class SagAccCm implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "CACM_CODIGO")
-	private String codigo;
+	@Column(name = "CACM_CACMcodigo")
+	private String CACMcodigo;
 	@Column(name = "CACM_DESCRI")
 	private String descri;
 	@Column(name = "CACM_TIPENT")
@@ -44,11 +44,11 @@ public class SagAccCm implements Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getCodigo() {
-		return codigo;
+	public String getCACMcodigo() {
+		return CACMcodigo;
 	}
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
+	public void setCACMcodigo(String CACMcodigo) {
+		this.CACMcodigo = CACMcodigo;
 	}
 	public String getDescri() {
 		return descri;
