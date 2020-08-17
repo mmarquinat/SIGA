@@ -13,9 +13,7 @@ import javax.persistence.Table;
 @Table(name = "sag_acc_con")
 public class SagAccCn implements Serializable{
 	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 5973174676128997761L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
