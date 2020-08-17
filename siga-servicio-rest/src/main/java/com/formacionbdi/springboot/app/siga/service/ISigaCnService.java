@@ -2,9 +2,11 @@ package com.formacionbdi.springboot.app.siga.service;
 
 import java.util.List;
 
+import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
 
-public interface ISigaService {
+public interface ISigaCnService {
 
-		public List<SagAccCn> findAll();
+	public List<SagAccCn> findAll();
+
 }

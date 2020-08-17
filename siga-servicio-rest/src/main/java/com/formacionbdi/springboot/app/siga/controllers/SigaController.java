@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
-import com.formacionbdi.springboot.app.siga.service.ISigaService;
+import com.formacionbdi.springboot.app.siga.service.ISigaCmService;
+import com.formacionbdi.springboot.app.siga.service.ISigaCnService;
 
 
 @RestController
@@ -16,12 +18,19 @@ public class SigaController {
 	
 
 	@Autowired
-	private ISigaService restService;
-	
-	@GetMapping("/listar")
-	public List<SagAccCn> listar(){
-		return restService.findAll().stream().collect(Collectors.toList());
+	private ISigaCnService restCnService;
+	@GetMapping("/listar-sag-acc-con")
+	public List<SagAccCn> listarCn(){
+		return restCnService.findAll().stream().collect(Collectors.toList());
 	}
+	
+	@Autowired
+	private ISigaCmService restCmService;
+	@GetMapping("/listar-sag-acc-com")
+	public List<SagAccCm> listarCm(){
+		return restCmService.findAll().stream().collect(Collectors.toList());
+	}
+	
 	/*
 	@GetMapping("/ver/{id}")
 	public Producto detalle(@PathVariable Long id) {
@@ -31,8 +40,11 @@ public class SigaController {
 		return productoService.findByID(id);
 	}
 	*/
-	@GetMapping("/pruebita")
+	@GetMapping("/")
 	public String prueb() {
-		return "Hello World :)";
+		return "  Lista Servicios  \n"
+				+ "*******************\n"
+				+ "/listar-sag-acc-com\n"
+				+ "/listar-sag-acc-con\n";
 	}
 }

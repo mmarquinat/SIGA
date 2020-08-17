@@ -5,17 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.formacionbdi.springboot.app.siga.dao.SigaDao;
+import com.formacionbdi.springboot.app.siga.dao.SigaAccCnDao;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
 
 @Service
-public class SigaServiceImpl implements ISigaService{
+public class SigaCnServiceImpl implements ISigaCnService{
 
 	@Autowired
-	private SigaDao sigaDao;
+	private SigaAccCnDao sigaCnDao;
 	
 	@Override
 	public List<SagAccCn> findAll() {
-		return (List<SagAccCn>) sigaDao.findAll();
+		return (List<SagAccCn>) sigaCnDao.findAll();
 	}
+	
 }

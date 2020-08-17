@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
 
-public interface SigaDao extends CrudRepository<SagAccCn, Long>{
+public interface SigaAccCnDao extends CrudRepository<SagAccCn, Long>{
 
 }
