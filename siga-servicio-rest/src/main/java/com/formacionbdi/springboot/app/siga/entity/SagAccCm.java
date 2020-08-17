@@ -102,5 +102,5 @@ public class SagAccCm implements Serializable{
 		return serialVersionUID;
 	}
 
-	
+	 
 }
