@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
 import com.formacionbdi.springboot.app.siga.entity.SagO;
+import com.formacionbdi.springboot.app.siga.entity.SagR;
 import com.formacionbdi.springboot.app.siga.service.ISigaCmService;
 import com.formacionbdi.springboot.app.siga.service.ISigaCnService;
 import com.formacionbdi.springboot.app.siga.service.ISigaOService;
+import com.formacionbdi.springboot.app.siga.service.ISigaRService;
 
 
 @RestController
@@ -39,6 +41,24 @@ public class SigaController {
 	public List<SagO> listarO(){
 		return restOService.findAll().stream().collect(Collectors.toList());
 	}
+	
+	@Autowired
+	private ISigaRService restRService;
+	@GetMapping("/listar-sag-rrhh")
+	public List<SagR> listarR(){
+		return restRService.findAll().stream().collect(Collectors.toList());
+	}
+
+	@GetMapping("/")
+	public String test() {
+		return "  Lista Servicios  \n"
+				+ "*******************\n"
+				+ "/listar-sag-acc-com\n"
+				+ "/listar-sag-acc-con\n"
+				+ "/listar-sag-ordenes\n"
+				+ "/listar-sag-rrhh\n";
+	}
+	
 	/*
 	@GetMapping("/ver/{id}")
 	public Producto detalle(@PathVariable Long id) {
@@ -48,12 +68,4 @@ public class SigaController {
 		return productoService.findByID(id);
 	}
 	*/
-	@GetMapping("/")
-	public String prueb() {
-		return "  Lista Servicios  \n"
-				+ "*******************\n"
-				+ "/listar-sag-acc-com\n"
-				+ "/listar-sag-acc-con\n"
-				+ "/listar-sag-ordenes\n";
-	}
 }
