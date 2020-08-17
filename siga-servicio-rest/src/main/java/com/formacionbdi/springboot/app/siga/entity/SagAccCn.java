@@ -18,20 +18,20 @@ public class SagAccCn implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "CACN_CACNcodigo")
-	private String CACNcodigo;
+	@Column(name = "CACN_CODIGO")
+	private String CNcodigo;
 	
 	@Column(name = "CACN_NOMBRE")
-	private String nombre;
+	private String CNnombre;
 
 	@Column(name = "CACN_TIPENT")
-	private String tipent;
+	private String CNtipent;
 
 	@Column(name = "CACN_ESTADO")
-	private String estado;
+	private String CNestado;
 	
 	@Column(name = "CACN_FLGELI")
-	private String fgleli;
+	private String CNfgleli;
 
 	public Long getId() {
 		return id;
@@ -40,44 +40,44 @@ public class SagAccCn implements Serializable{
 		this.id = id;
 	}
 	
-	public String getCACNcodigo() {
-		return CACNcodigo;
+	public String getCNcodigo() {
+		return CNcodigo;
 	}
 
-	public void setCACNcodigo(String CACNcodigo) {
-		this.CACNcodigo = CACNcodigo;
+	public void setCNcodigo(String codigo) {
+		this.CNcodigo = codigo;
 	}
 
 	public String getNombre() {
-		return nombre;
+		return CNnombre;
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.CNnombre = nombre;
 	}
 
 	public String getTipent() {
-		return tipent;
+		return CNtipent;
 	}
 
 	public void setTipent(String tipent) {
-		this.tipent = tipent;
+		this.CNtipent = tipent;
 	}
 
 	public String getEstado() {
-		return estado;
+		return CNestado;
 	}
 
 	public void setEstado(String estado) {
-		this.estado = estado;
+		this.CNestado = estado;
 	}
 
 	public String getFgleli() {
-		return fgleli;
+		return CNfgleli;
 	}
 
 	public void setFgleli(String fgleli) {
-		this.fgleli = fgleli;
+		this.CNfgleli = fgleli;
 	}
 	
 	

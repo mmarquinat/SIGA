@@ -19,24 +19,24 @@ public class SagAccCm implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "CACM_CACMcodigo")
-	private String CACMcodigo;
+	@Column(name = "CACM_CODIGO")
+	private String CMcodigo;
 	@Column(name = "CACM_DESCRI")
-	private String descri;
+	private String CMdescri;
 	@Column(name = "CACM_TIPENT")
-	private String tipent;
+	private String CMtipent;
 	@Column(name = "CACM_ESTADO")
-	private String estado;
+	private String CMestado;
 	@Column(name = "CACM_FLGELI")
-	private String fgleli;
+	private String CMfgleli;
 	@Column(name = "DACM_FECCRE")
-	private Date feccre;
+	private Date CMfeccre;
 	@Column(name = "CACM_USUCRE")
-	private String usucre;
+	private String CMusucre;
 	@Column(name = "DACM_FECMOD")
-	private Date fecmod;
+	private Date CMfecmod;
 	@Column(name = "CACM_USUMOD")
-	private String usumod;
+	private String CMusumod;
 	
 	public Long getId() {
 		return id;
@@ -45,58 +45,58 @@ public class SagAccCm implements Serializable{
 		this.id = id;
 	}
 	public String getCACMcodigo() {
-		return CACMcodigo;
+		return CMcodigo;
 	}
-	public void setCACMcodigo(String CACMcodigo) {
-		this.CACMcodigo = CACMcodigo;
+	public void setCACMcodigo(String codigo) {
+		this.CMcodigo = codigo;
 	}
 	public String getDescri() {
-		return descri;
+		return CMdescri;
 	}
 	public void setDescri(String descri) {
-		this.descri = descri;
+		this.CMdescri = descri;
 	}
 	public String getTipent() {
-		return tipent;
+		return CMtipent;
 	}
 	public void setTipent(String tipent) {
-		this.tipent = tipent;
+		this.CMtipent = tipent;
 	}
 	public String getEstado() {
-		return estado;
+		return CMestado;
 	}
 	public void setEstado(String estado) {
-		this.estado = estado;
+		this.CMestado = estado;
 	}
 	public String getFgleli() {
-		return fgleli;
+		return CMfgleli;
 	}
 	public void setFgleli(String fgleli) {
-		this.fgleli = fgleli;
+		this.CMfgleli = fgleli;
 	}
 	public Date getFeccre() {
-		return feccre;
+		return CMfeccre;
 	}
 	public void setFeccre(Date feccre) {
-		this.feccre = feccre;
+		this.CMfeccre = feccre;
 	}
 	public String getUsucre() {
-		return usucre;
+		return CMusucre;
 	}
 	public void setUsucre(String usucre) {
-		this.usucre = usucre;
+		this.CMusucre = usucre;
 	}
 	public Date getFecmod() {
-		return fecmod;
+		return CMfecmod;
 	}
 	public void setFecmod(Date fecmod) {
-		this.fecmod = fecmod;
+		this.CMfecmod = fecmod;
 	}
 	public String getUsumod() {
-		return usumod;
+		return CMusumod;
 	}
 	public void setUsumod(String usumod) {
-		this.usumod = usumod;
+		this.CMusumod = usumod;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
