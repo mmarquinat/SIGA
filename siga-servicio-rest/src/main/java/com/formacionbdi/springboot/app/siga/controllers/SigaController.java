@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
+import com.formacionbdi.springboot.app.siga.entity.SagO;
 import com.formacionbdi.springboot.app.siga.service.ISigaCmService;
 import com.formacionbdi.springboot.app.siga.service.ISigaCnService;
+import com.formacionbdi.springboot.app.siga.service.ISigaOService;
 
 
 @RestController
@@ -31,6 +33,12 @@ public class SigaController {
 		return restCmService.findAll().stream().collect(Collectors.toList());
 	}
 	
+	@Autowired
+	private ISigaOService restOService;
+	@GetMapping("/listar-sag-ordenes")
+	public List<SagO> listarO(){
+		return restOService.findAll().stream().collect(Collectors.toList());
+	}
 	/*
 	@GetMapping("/ver/{id}")
 	public Producto detalle(@PathVariable Long id) {
@@ -45,6 +53,7 @@ public class SigaController {
 		return "  Lista Servicios  \n"
 				+ "*******************\n"
 				+ "/listar-sag-acc-com\n"
-				+ "/listar-sag-acc-con\n";
+				+ "/listar-sag-acc-con\n"
+				+ "/listar-sag-ordenes\n";
 	}
 }
