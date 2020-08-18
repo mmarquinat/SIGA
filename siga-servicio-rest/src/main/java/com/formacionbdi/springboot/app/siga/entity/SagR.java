@@ -1,7 +1,16 @@
 package com.formacionbdi.springboot.app.siga.entity;
+import java.io.*;
+public class SagR implements Serializable{
 
+<<<<<<< HEAD
 import java.io.Serializable;
 import java.util.Date;
+=======
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8334304879199256833L;
+>>>>>>> refs/heads/2020-Holi
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
