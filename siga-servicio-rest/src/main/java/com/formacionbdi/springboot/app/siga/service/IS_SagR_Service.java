@@ -4,6 +4,6 @@ import java.util.List;
 
 import com.formacionbdi.springboot.app.siga.entity.SagR;
 
-public interface ISigaRService {
+public interface IS_SagR_Service {
 	public List<SagR> findAll();
 }

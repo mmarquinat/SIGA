@@ -4,6 +4,6 @@ import java.util.List;
 
 import com.formacionbdi.springboot.app.siga.entity.SagO;
 
-public interface ISigaOService {
+public interface IS_SagO_Service {
 	public List<SagO> findAll();
 }

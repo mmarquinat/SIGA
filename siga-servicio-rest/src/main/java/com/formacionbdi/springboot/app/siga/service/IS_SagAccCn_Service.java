@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
 
-public interface ISigaCnService {
+public interface IS_SagAccCn_Service {
 
 	public List<SagAccCn> findAll();
 

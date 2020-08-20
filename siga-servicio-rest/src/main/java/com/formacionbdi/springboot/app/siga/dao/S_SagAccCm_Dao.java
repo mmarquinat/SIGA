@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 
-public interface SigaAccCmDao extends CrudRepository<SagAccCm, Long>{
+public interface S_SagAccCm_Dao extends CrudRepository<SagAccCm, Long>{
 	 //List<SagAccCm> findByLastName(String CMcodigo);
 }
