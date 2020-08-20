@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.formacionbdi.springboot.app.siga.entity.CatalogoBienS;
 import com.formacionbdi.springboot.app.siga.entity.ClaseBienS;
+import com.formacionbdi.springboot.app.siga.entity.FamiliaBienS;
 import com.formacionbdi.springboot.app.siga.entity.GrupoBienS;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
@@ -17,6 +18,7 @@ import com.formacionbdi.springboot.app.siga.entity.SagR;
 import com.formacionbdi.springboot.app.siga.entity.UnidadM;
 import com.formacionbdi.springboot.app.siga.service.IS_CatalogoBienS_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_ClaseBienS_Service;
+import com.formacionbdi.springboot.app.siga.service.IS_FamiliaBienS_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_GrupoBienS_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagAccCm_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagAccCn_Service;
@@ -40,6 +42,13 @@ public class SigaController {
 	@GetMapping("/listar-clase-bien-serv")
 	public List<ClaseBienS> listarClBS(){
 		return restClBSService.findAll().stream().collect(Collectors.toList());
+	}
+	
+	@Autowired
+	private IS_FamiliaBienS_Service restFBSService;
+	@GetMapping("/listar-familia-bien-serv")
+	public List<FamiliaBienS> listarFBS(){
+		return restFBSService.findAll().stream().collect(Collectors.toList());
 	}
 	
 	@Autowired
@@ -91,6 +100,7 @@ public class SigaController {
 				+ "*******************\n"
 				+ "/listar-catalogo-bien-serv\n"
 				+ "/listar-clase-bien-serv\n"
+				+ "/listar-familia-bien-serv\n"
 				+ "/listar-grupo-bien-serv\n"
 				+ "/listar-sag-acc-com\n"
 				+ "/listar-sag-acc-con\n"
