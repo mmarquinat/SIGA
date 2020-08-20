@@ -12,11 +12,11 @@ import com.formacionbdi.springboot.app.siga.entity.CatalogoBienS;
 public class S_CatalogoBienS_ServiceImpl implements IS_CatalogoBienS_Service{
 
 	@Autowired
-	private S_CatalogoBienS_Dao sigaCBDao;
+	private S_CatalogoBienS_Dao sigaCBSDao;
 	
 	@Override
 	public List<CatalogoBienS> findAll() {
-		return (List<CatalogoBienS>) sigaCBDao.findAll();
+		return (List<CatalogoBienS>) sigaCBSDao.findAll();
 	}
 	
 }

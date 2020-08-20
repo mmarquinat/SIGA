@@ -15,6 +15,7 @@ import javax.persistence.Table;
 public class SagO implements Serializable{
 	
 	private static final long serialVersionUID = 894295154859305550L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

@@ -13,23 +13,20 @@ import javax.persistence.Table;
 @Table(name = "sag_acc_con")
 public class SagAccCn implements Serializable{
 	
-
 	private static final long serialVersionUID = 5973174676128997761L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	@Column(name = "CACN_CODIGO")
 	private String CNcodigo;
-	
 	@Column(name = "CACN_NOMBRE")
 	private String CNnombre;
-
 	@Column(name = "CACN_TIPENT")
 	private String CNtipent;
-
 	@Column(name = "CACN_ESTADO")
 	private String CNestado;
-	
 	@Column(name = "CACN_FLGELI")
 	private String CNfgleli;
 

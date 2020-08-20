@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.formacionbdi.springboot.app.siga.entity.CatalogoBienS;
 import com.formacionbdi.springboot.app.siga.entity.ClaseBienS;
+import com.formacionbdi.springboot.app.siga.entity.GrupoBienS;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
 import com.formacionbdi.springboot.app.siga.entity.SagO;
@@ -16,6 +17,7 @@ import com.formacionbdi.springboot.app.siga.entity.SagR;
 import com.formacionbdi.springboot.app.siga.entity.UnidadM;
 import com.formacionbdi.springboot.app.siga.service.IS_CatalogoBienS_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_ClaseBienS_Service;
+import com.formacionbdi.springboot.app.siga.service.IS_GrupoBienS_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagAccCm_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagAccCn_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagO_Service;
@@ -28,7 +30,7 @@ public class SigaController {
 	
 	@Autowired
 	private IS_CatalogoBienS_Service restCBSService;
-	@GetMapping("/listar-grupo-bien-serv")
+	@GetMapping("/listar-catalogo-bien-serv")
 	public List<CatalogoBienS> listarCBS(){
 		return restCBSService.findAll().stream().collect(Collectors.toList());
 	}
@@ -38,6 +40,13 @@ public class SigaController {
 	@GetMapping("/listar-clase-bien-serv")
 	public List<ClaseBienS> listarClBS(){
 		return restClBSService.findAll().stream().collect(Collectors.toList());
+	}
+	
+	@Autowired
+	private IS_GrupoBienS_Service restGBSService;
+	@GetMapping("/listar-grupo-bien-serv")
+	public List<GrupoBienS> listarGBS(){
+		return restGBSService.findAll().stream().collect(Collectors.toList());
 	}
 	
 	@Autowired
@@ -75,12 +84,14 @@ public class SigaController {
 		return restUMService.findAll().stream().collect(Collectors.toList());
 	}
 	
+	
 	@GetMapping("/")
 	public String test() {
 		return "  Lista Servicios  \n"
 				+ "*******************\n"
-				+ "/listar-grupo-bien-serv\n"
+				+ "/listar-catalogo-bien-serv\n"
 				+ "/listar-clase-bien-serv\n"
+				+ "/listar-grupo-bien-serv\n"
 				+ "/listar-sag-acc-com\n"
 				+ "/listar-sag-acc-con\n"
 				+ "/listar-sag-ordenes\n"

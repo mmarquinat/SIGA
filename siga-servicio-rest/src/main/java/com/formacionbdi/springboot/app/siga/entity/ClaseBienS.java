@@ -14,7 +14,6 @@ import javax.persistence.Table;
 @Table(name = "clase_bien_serv")
 public class ClaseBienS implements Serializable{
 
-
 	private static final long serialVersionUID = 4346284932915116340L;
 	
 	@Id

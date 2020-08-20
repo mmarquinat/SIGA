@@ -15,6 +15,7 @@ import javax.persistence.Table;
 public class SagAccCm implements Serializable{
 	
 	private static final long serialVersionUID = -1606894697532819698L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

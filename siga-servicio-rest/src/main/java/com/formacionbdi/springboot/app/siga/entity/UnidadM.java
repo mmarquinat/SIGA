@@ -1,4 +1,5 @@
 package com.formacionbdi.springboot.app.siga.entity;
+
 import java.io.*;
 import java.util.Date;
 
