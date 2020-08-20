@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formacionbdi.springboot.app.siga.entity.CatalogoBienS;
+import com.formacionbdi.springboot.app.siga.entity.ClaseBienS;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
 import com.formacionbdi.springboot.app.siga.entity.SagO;
 import com.formacionbdi.springboot.app.siga.entity.SagR;
 import com.formacionbdi.springboot.app.siga.service.IS_CatalogoBienS_Service;
+import com.formacionbdi.springboot.app.siga.service.IS_ClaseBienS_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagAccCm_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagAccCn_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagO_Service;
@@ -24,9 +26,16 @@ public class SigaController {
 	
 	@Autowired
 	private IS_CatalogoBienS_Service restCBSService;
-	@GetMapping("/listar-grupo_bien_serv")
+	@GetMapping("/listar-grupo-bien-serv")
 	public List<CatalogoBienS> listarCBS(){
 		return restCBSService.findAll().stream().collect(Collectors.toList());
+	}
+	
+	@Autowired
+	private IS_ClaseBienS_Service restClBSService;
+	@GetMapping("/listar-clase-bien-serv")
+	public List<ClaseBienS> listarClBS(){
+		return restClBSService.findAll().stream().collect(Collectors.toList());
 	}
 	
 	@Autowired
@@ -61,11 +70,13 @@ public class SigaController {
 	public String test() {
 		return "  Lista Servicios  \n"
 				+ "*******************\n"
+				+ "/listar-grupo-bien-serv\n"
+				+ "/listar-clase-bien-serv\n"
 				+ "/listar-sag-acc-com\n"
 				+ "/listar-sag-acc-con\n"
 				+ "/listar-sag-ordenes\n"
 				+ "/listar-sag-rrhh\n"
-				+ "/listar-grupo_bien_serv\n";
+				+ "";
 	}
 	
 	/*
