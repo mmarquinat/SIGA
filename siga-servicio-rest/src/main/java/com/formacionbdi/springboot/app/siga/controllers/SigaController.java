@@ -13,12 +13,14 @@ import com.formacionbdi.springboot.app.siga.entity.SagAccCm;
 import com.formacionbdi.springboot.app.siga.entity.SagAccCn;
 import com.formacionbdi.springboot.app.siga.entity.SagO;
 import com.formacionbdi.springboot.app.siga.entity.SagR;
+import com.formacionbdi.springboot.app.siga.entity.UnidadM;
 import com.formacionbdi.springboot.app.siga.service.IS_CatalogoBienS_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_ClaseBienS_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagAccCm_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagAccCn_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagO_Service;
 import com.formacionbdi.springboot.app.siga.service.IS_SagR_Service;
+import com.formacionbdi.springboot.app.siga.service.IS_UnidadM_Service;
 
 
 @RestController
@@ -66,6 +68,13 @@ public class SigaController {
 		return restRService.findAll().stream().collect(Collectors.toList());
 	}
 
+	@Autowired
+	private IS_UnidadM_Service restUMService;
+	@GetMapping("/listar-unidad-medida")
+	public List<UnidadM> listarUM(){
+		return restUMService.findAll().stream().collect(Collectors.toList());
+	}
+	
 	@GetMapping("/")
 	public String test() {
 		return "  Lista Servicios  \n"
@@ -76,7 +85,7 @@ public class SigaController {
 				+ "/listar-sag-acc-con\n"
 				+ "/listar-sag-ordenes\n"
 				+ "/listar-sag-rrhh\n"
-				+ "";
+				+ "/listar-unidad-medida\n";
 	}
 	
 	/*
