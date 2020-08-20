@@ -14,8 +14,9 @@ import javax.persistence.Table;
 @Table(name = "sag_ordenes")
 public class SagO implements Serializable{
 	
-	private static final long serialVersionUID = 894295154859305550L;
-	
+
+	private static final long serialVersionUID = -7473099020564589939L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -51,17 +52,17 @@ public class SagO implements Serializable{
 	public void setCOcodigo(String cOcodigo) {
 		COcodigo = cOcodigo;
 	}
-	public String getCACNcodigo() {
+	public String getCNcodigo() {
 		return CNcodigo;
 	}
-	public void setCACNcodigo(String cACNcodigo) {
-		CNcodigo = cACNcodigo;
+	public void setCNcodigo(String cNcodigo) {
+		CNcodigo = cNcodigo;
 	}
-	public String getCACMcodigo() {
+	public String getCMcodigo() {
 		return CMcodigo;
 	}
-	public void setCACMcodigo(String cACMcodigo) {
-		CMcodigo = cACMcodigo;
+	public void setCMcodigo(String cMcodigo) {
+		CMcodigo = cMcodigo;
 	}
 	public String getCOestado() {
 		return COestado;

@@ -13,9 +13,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "sag_rrhh")
 public class SagR implements Serializable{
-	
-	private static final long serialVersionUID = 9006146469652258589L;
-	
+		
+	private static final long serialVersionUID = 2674679338584223525L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
