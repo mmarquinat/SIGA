@@ -84,9 +84,9 @@ public class SigaController {
 	private IS_GrupoBienS_Service restGBSService;
 	@GetMapping("/listar-grupo-bien-serv")
 	public List<GrupoBienS> listarGBS(){
-		return restGBSService.findAll().stream().collect(Collectors.toList());
+		return restGBSService.findByTodos().stream().collect(Collectors.toList());
 	}
-	@GetMapping("/listar-grupo-bien-serv/{id}")
+	@GetMapping("/listar-grupo-bien-serv/{var1}/{var2}")
 	public GrupoBienS detailGBS(@PathVariable String var1, @PathVariable String var2){
 		System.out.println(var1);
 		System.out.println(var2);
