@@ -1,23 +1,20 @@
 package com.formacionbdi.springboot.app.siga.entity;
-
-import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "familia_bien_serv")
-public class FamiliaBienS  implements Serializable {
-
-	private static final long serialVersionUID = -8903627667697238545L;
+@IdClass(FamiliaBienSId.class)
+public class FamiliaBienS  {
 	
 	@Id @Column (name = "CFBS_TIPO_BIEN") private String var1;
-	@Column (name = "CFBS_GRUPO_BIEN") 	private String var2;
-	@Column (name = "CFBS_CLASE_BIEN") 	private String var3;
-	@Column (name = "FAMILIA_BIEN") 	private String var4;
+	@Id @Column (name = "CFBS_GRUPO_BIEN") 	private String var2;
+	@Id @Column (name = "CFBS_CLASE_BIEN") 	private String var3;
+	@Id @Column (name = "FAMILIA_BIEN") 	private String var4;
 	
 	@Column (name = "NOMBRE_FAM")
 	private String nombre_fam;

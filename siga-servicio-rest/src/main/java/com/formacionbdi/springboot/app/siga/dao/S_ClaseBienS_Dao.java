@@ -3,7 +3,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import com.formacionbdi.springboot.app.siga.entity.ClaseBienS;
-public interface S_ClaseBienS_Dao extends CrudRepository<ClaseBienS, String>{
+import com.formacionbdi.springboot.app.siga.entity.ClaseBienSId;
+public interface S_ClaseBienS_Dao extends CrudRepository<ClaseBienS, ClaseBienSId>{
 	
 	@Query(
 			  value = "SELECT * FROM CLASE_BIEN_SERV WHERE CCBS_TIPO_BIEN = :var1 "

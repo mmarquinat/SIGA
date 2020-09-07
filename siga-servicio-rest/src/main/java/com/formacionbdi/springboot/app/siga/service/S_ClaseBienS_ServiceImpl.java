@@ -1,7 +1,5 @@
 package com.formacionbdi.springboot.app.siga.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,8 +15,8 @@ public class S_ClaseBienS_ServiceImpl implements IS_ClaseBienS_Service{
 		
 	@Override
 	@Transactional(readOnly = true)
-	public List<ClaseBienS> findAll() {
-		return (List<ClaseBienS>) sigaClBSDao.findAll();
+	public Iterable<ClaseBienS> findAll() {
+		return sigaClBSDao.findAll();
 	}
 	
 	@Override

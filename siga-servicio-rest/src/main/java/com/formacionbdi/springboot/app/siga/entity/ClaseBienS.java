@@ -1,19 +1,18 @@
 package com.formacionbdi.springboot.app.siga.entity;
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 @Entity
 @Table(name = "clase_bien_serv")
-public class ClaseBienS implements Serializable{
-
-	private static final long serialVersionUID = 8742039005752763207L;
+@IdClass(ClaseBienSId.class)
+public class ClaseBienS{
 	
 	@Id @Column(name = "CCBS_TIPO_BIEN") private String var1;
-	@Column(name = "CCBS_GRUPO_BIEN") private String var2;
-	@Column(name = "CCBS_CLASE_BIEN") private String var3;
+	@Id @Column(name = "CCBS_GRUPO_BIEN") private String var2;
+	@Id @Column(name = "CCBS_CLASE_BIEN") private String var3;
 	
 	@Column(name = "NOMBRE_CLASE")
 	private String nombre_clase;

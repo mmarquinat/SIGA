@@ -17,8 +17,8 @@ public class S_CatalogoBienS_ServiceImpl implements IS_CatalogoBienS_Service{
 	
 	@Override
 	@Transactional(readOnly = true)
-	public List<CatalogoBienS> findAll() {
-		return (List<CatalogoBienS>) sigaCBSDao.findAll();
+	public Iterable<CatalogoBienS> findAll() {
+		return sigaCBSDao.findAll();
 	}
 	
 	@Override

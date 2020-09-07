@@ -1,5 +1,4 @@
 package com.formacionbdi.springboot.app.siga.service;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,10 +16,5 @@ public class S_GrupoBienS_ServiceImpl implements IS_GrupoBienS_Service{
 	@Transactional(readOnly = true)
 	public GrupoBienS findByGBS(String var1, String var2) {
 		return (GrupoBienS) sigaGBSDao.findByGBS(var1, var2);
-	}
-	@Override
-	@Transactional(readOnly = true)
-	public List<GrupoBienS> findByTodos() {
-		return (List<GrupoBienS>) sigaGBSDao.findByTodos();
 	}
 }

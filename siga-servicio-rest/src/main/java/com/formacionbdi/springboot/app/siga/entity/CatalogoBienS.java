@@ -1,22 +1,21 @@
 package com.formacionbdi.springboot.app.siga.entity;
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 @Entity
 @Table(name = "catalogo_bien_serv")
-public class CatalogoBienS implements Serializable{
-
-	private static final long serialVersionUID = -2245056485189988269L;
+@IdClass(CatalogoBienSId.class)
+public class CatalogoBienS{
 	
 	@Id @Column(name = "NCAT_SEC_EJEC") 	private String var1;
-	@Column(name = "CCAT_TIPO_BIEN") 	private String var2;
-	@Column(name = "CCAT_GRUPO_BIEN")	private String var3;
-	@Column(name = "CCAT_CLASE_BIEN")	private String var4;
-	@Column(name = "CCAT_FAMILIA_BIEN")	private String var5;
-	@Column(name = "ITEM_BIEN") 		private String var6;
+	@Id @Column(name = "CCAT_TIPO_BIEN") 	private String var2;
+	@Id @Column(name = "CCAT_GRUPO_BIEN")	private String var3;
+	@Id @Column(name = "CCAT_CLASE_BIEN")	private String var4;
+	@Id @Column(name = "CCAT_FAMILIA_BIEN")	private String var5;
+	@Id @Column(name = "ITEM_BIEN") 		private String var6;
 	
 	@Column(name = "NOMBRE_ITEM")
 	private String nombre_item;

@@ -3,7 +3,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import com.formacionbdi.springboot.app.siga.entity.FamiliaBienS;
-public interface S_FamiliaBienS_Dao extends CrudRepository<FamiliaBienS, String>{
+import com.formacionbdi.springboot.app.siga.entity.FamiliaBienSId;
+public interface S_FamiliaBienS_Dao extends CrudRepository<FamiliaBienS, FamiliaBienSId>{
 	@Query(
 			  value = "SELECT * FROM FAMILIA_BIEN_SERV WHERE CFBS_TIPO_BIEN = :var1 "
 			  		+ "AND CFBS_GRUPO_BIEN = :var2 "

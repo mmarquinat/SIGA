@@ -25,19 +25,14 @@ public class SigaController {
 	@Autowired
 	private IS_CatalogoBienS_Service restCBSService;
 	@GetMapping("/listar-catalogo-bien-serv")
-	public List<CatalogoBienS> listarCBS(){
-		return restCBSService.findAll().stream().collect(Collectors.toList());
-	}	
+	public Iterable<CatalogoBienS> listarCBS(){
+		return restCBSService.findAll();
+	}
+
 	@GetMapping("/listar-catalogo-bien-serv/prueba/{var1}/{var2}/{var3}/{var4}/{var5}/{var6}")
 	public CatalogoBienS detailCBS(@PathVariable String var1, @PathVariable String var2,
 			@PathVariable String var3, @PathVariable String var4,
 			@PathVariable String var5, @PathVariable String var6){
-		System.out.println(var1);
-		System.out.println(var2);
-		System.out.println(var3);
-		System.out.println(var4);
-		System.out.println(var5);
-		System.out.println(var6);
 		return restCBSService.findByCBS(var1, var2, var3, var4, var5, var6);
 	}	
 	/*******************************************************************************************************************************************
@@ -47,8 +42,8 @@ public class SigaController {
 	@Autowired
 	private IS_ClaseBienS_Service restClBSService;
 	@GetMapping("/listar-clase-bien-serv")
-	public List<ClaseBienS> listarClBS(){
-		return restClBSService.findAll().stream().collect(Collectors.toList());
+	public Iterable<ClaseBienS> listarClBS(){
+		return restClBSService.findAll();
 	}
 	@GetMapping("/listar-clase-bien-serv/prueba/{var1}/{var2}/{var3}")
 	public ClaseBienS detailClBS(@PathVariable String var1, @PathVariable String var2, @PathVariable String var3){
@@ -64,8 +59,8 @@ public class SigaController {
 	@Autowired
 	private IS_FamiliaBienS_Service restFBSService;
 	@GetMapping("/listar-familia-bien-serv")
-	public List<FamiliaBienS> listarFBS(){
-		return restFBSService.findAll().stream().collect(Collectors.toList());
+	public Iterable<FamiliaBienS> listarFBS(){
+		return restFBSService.findAll();
 	}	
 	@GetMapping("/listar-familia-bien-serv/prueba/{var1}/{var2}/{var3}/{var4}")
 	public FamiliaBienS detailFBS(@PathVariable String fbs1, @PathVariable String fbs2, 
@@ -83,8 +78,8 @@ public class SigaController {
 	@Autowired
 	private IS_GrupoBienS_Service restGBSService;
 	@GetMapping("/listar-grupo-bien-serv")
-	public List<GrupoBienS> listarGBS(){
-		return restGBSService.findByTodos().stream().collect(Collectors.toList());
+	public Iterable<GrupoBienS> listarGBS(){
+		return restGBSService.findAll();
 	}
 	@GetMapping("/listar-grupo-bien-serv/{var1}/{var2}")
 	public GrupoBienS detailGBS(@PathVariable String var1, @PathVariable String var2){

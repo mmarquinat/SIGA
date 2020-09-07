@@ -2,8 +2,10 @@ package com.formacionbdi.springboot.app.siga.dao;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+
 import com.formacionbdi.springboot.app.siga.entity.CatalogoBienS;
-public interface S_CatalogoBienS_Dao extends CrudRepository<CatalogoBienS, String>{
+import com.formacionbdi.springboot.app.siga.entity.CatalogoBienSId;
+public interface S_CatalogoBienS_Dao extends CrudRepository<CatalogoBienS, CatalogoBienSId>{
 	
 	@Query(
 			  value = "SELECT * FROM CATALOGO_BIEN_SERV WHERE NCAT_SEC_EJEC = :var1 "
