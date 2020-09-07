@@ -10,9 +10,8 @@ public class S_GrupoBienS_ServiceImpl implements IS_GrupoBienS_Service{
 	@Autowired
 	private S_GrupoBienS_Dao sigaGBSDao;
 	@Override
-	@Transactional(readOnly = true)
-	public List<GrupoBienS> findAll() {
-		return (List<GrupoBienS>) sigaGBSDao.findAll();
+	public Iterable<GrupoBienS> findAll() {
+		return sigaGBSDao.findAll();
 	}
 	@Override
 	@Transactional(readOnly = true)

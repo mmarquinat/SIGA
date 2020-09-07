@@ -4,7 +4,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import com.formacionbdi.springboot.app.siga.entity.GrupoBienS;
-public interface S_GrupoBienS_Dao extends CrudRepository<GrupoBienS, String>{
+import com.formacionbdi.springboot.app.siga.entity.GrupoBienSId;
+public interface S_GrupoBienS_Dao extends CrudRepository<GrupoBienS, GrupoBienSId>{
 	@Query(
 			  value = "SELECT DISTINCT * FROM GRUPO_BIEN_SERV GROUP BY tipo_bien, grupo_bien", 
 			  nativeQuery = true)
