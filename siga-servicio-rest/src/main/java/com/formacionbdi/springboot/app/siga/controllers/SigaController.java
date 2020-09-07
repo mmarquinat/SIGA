@@ -29,7 +29,7 @@ public class SigaController {
 		return restCBSService.findAll();
 	}
 
-	@GetMapping("/listar-catalogo-bien-serv/prueba/{var1}/{var2}/{var3}/{var4}/{var5}/{var6}")
+	@GetMapping("/listar-catalogo-bien-serv/{var1}/{var2}/{var3}/{var4}/{var5}/{var6}")
 	public CatalogoBienS detailCBS(@PathVariable String var1, @PathVariable String var2,
 			@PathVariable String var3, @PathVariable String var4,
 			@PathVariable String var5, @PathVariable String var6){
@@ -45,7 +45,7 @@ public class SigaController {
 	public Iterable<ClaseBienS> listarClBS(){
 		return restClBSService.findAll();
 	}
-	@GetMapping("/listar-clase-bien-serv/prueba/{var1}/{var2}/{var3}")
+	@GetMapping("/listar-clase-bien-serv/{var1}/{var2}/{var3}")
 	public ClaseBienS detailClBS(@PathVariable String var1, @PathVariable String var2, @PathVariable String var3){
 		System.out.println(var1);
 		System.out.println(var2);
@@ -62,7 +62,7 @@ public class SigaController {
 	public Iterable<FamiliaBienS> listarFBS(){
 		return restFBSService.findAll();
 	}	
-	@GetMapping("/listar-familia-bien-serv/prueba/{var1}/{var2}/{var3}/{var4}")
+	@GetMapping("/listar-familia-bien-serv/{var1}/{var2}/{var3}/{var4}")
 	public FamiliaBienS detailFBS(@PathVariable String fbs1, @PathVariable String fbs2, 
 			@PathVariable String fbs3, @PathVariable String fbs4){
 		return restFBSService.findByFBS(fbs1, fbs2, fbs3, fbs4);
