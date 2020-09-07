@@ -5,8 +5,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,11 +14,7 @@ public class UnidadM implements Serializable{
 
 	private static final long serialVersionUID = -8760994880076729038L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	@Column(name="UNIDAD_MEDIDA")
+	@Id @Column(name="UNIDAD_MEDIDA")
 	private String unidad_medida;
 	@Column(name="CUME_NOMBRE")
 	private String cume_nombre;
@@ -50,12 +44,7 @@ public class UnidadM implements Serializable{
 	private String nume_unidad_medida_siaf;
 	@Column(name="CUME_ES_PATRIMONIO")
 	private String cume_es_patrimonio;
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+
 	public String getUnidad_medida() {
 		return unidad_medida;
 	}

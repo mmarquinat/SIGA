@@ -17,10 +17,7 @@ public class SagO implements Serializable{
 
 	private static final long serialVersionUID = -7473099020564589939L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "CORD_CODIGO")
 	private String COcodigo;
 	@Column(name = "CACN_CODIGO")
@@ -40,12 +37,6 @@ public class SagO implements Serializable{
 	@Column(name = "DORD_FECMOD")
 	private Date DOfecmod;
 	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
 	public String getCOcodigo() {
 		return COcodigo;
 	}

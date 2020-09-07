@@ -6,4 +6,5 @@ import com.formacionbdi.springboot.app.siga.entity.UnidadM;
 
 public interface IS_UnidadM_Service {
 	public List<UnidadM> findAll();
+	public UnidadM findById(String id);
 }

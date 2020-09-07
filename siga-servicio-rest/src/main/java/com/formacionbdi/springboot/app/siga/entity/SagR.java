@@ -16,10 +16,7 @@ public class SagR implements Serializable{
 		
 	private static final long serialVersionUID = 2674679338584223525L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "CORD_CODIGO")
 	private String COcodigo;
 	@Column(name = "CPER_CODIGO")
@@ -45,12 +42,12 @@ public class SagR implements Serializable{
 	@Column(name = "DRHU_FECMOD")
 	private Date DRfecmod;
 	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+//	public Long getId() {
+//		return id;
+//	}
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
 	public String getCOcodigo() {
 		return COcodigo;
 	}

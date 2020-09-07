@@ -5,8 +5,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,20 +12,13 @@ import javax.persistence.Table;
 @Table(name = "familia_bien_serv")
 public class FamiliaBienS  implements Serializable {
 
-	private static final long serialVersionUID = 6763979774633202833L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private static final long serialVersionUID = -8903627667697238545L;
 	
-	@Column (name = "CFBS_TIPO_BIEN")
-	private String cfbs_tipo_bien;
-	@Column (name = "CFBS_GRUPO_BIEN")
-	private String cfbs_grupo_bien;
-	@Column (name = "CFBS_CLASE_BIEN")
-	private String cfbs_clase_bien;
-	@Column (name = "FAMILIA_BIEN")
-	private String familia_bien;
+	@Id @Column (name = "CFBS_TIPO_BIEN") private String var1;
+	@Column (name = "CFBS_GRUPO_BIEN") 	private String var2;
+	@Column (name = "CFBS_CLASE_BIEN") 	private String var3;
+	@Column (name = "FAMILIA_BIEN") 	private String var4;
+	
 	@Column (name = "NOMBRE_FAM")
 	private String nombre_fam;
 	@Column (name = "ALCANCE_FAM")
@@ -64,35 +55,29 @@ public class FamiliaBienS  implements Serializable {
 	private String cfbs_estado_mef;
 	@Column (name = "CFBS_FLAG_DURADERO")
 	private String cfbs_flag_duradero;
-	public Long getId() {
-		return id;
+	public String getVar1() {
+		return var1;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setVar1(String var1) {
+		this.var1 = var1;
 	}
-	public String getCfbs_tipo_bien() {
-		return cfbs_tipo_bien;
+	public String getVar2() {
+		return var2;
 	}
-	public void setCfbs_tipo_bien(String cfbs_tipo_bien) {
-		this.cfbs_tipo_bien = cfbs_tipo_bien;
+	public void setVar2(String var2) {
+		this.var2 = var2;
 	}
-	public String getCfbs_grupo_bien() {
-		return cfbs_grupo_bien;
+	public String getVar3() {
+		return var3;
 	}
-	public void setCfbs_grupo_bien(String cfbs_grupo_bien) {
-		this.cfbs_grupo_bien = cfbs_grupo_bien;
+	public void setVar3(String var3) {
+		this.var3 = var3;
 	}
-	public String getCfbs_clase_bien() {
-		return cfbs_clase_bien;
+	public String getVar4() {
+		return var4;
 	}
-	public void setCfbs_clase_bien(String cfbs_clase_bien) {
-		this.cfbs_clase_bien = cfbs_clase_bien;
-	}
-	public String getFamilia_bien() {
-		return familia_bien;
-	}
-	public void setFamilia_bien(String familia_bien) {
-		this.familia_bien = familia_bien;
+	public void setVar4(String var4) {
+		this.var4 = var4;
 	}
 	public String getNombre_fam() {
 		return nombre_fam;
@@ -202,5 +187,7 @@ public class FamiliaBienS  implements Serializable {
 	public void setCfbs_flag_duradero(String cfbs_flag_duradero) {
 		this.cfbs_flag_duradero = cfbs_flag_duradero;
 	}
+	
+	
 	
 }

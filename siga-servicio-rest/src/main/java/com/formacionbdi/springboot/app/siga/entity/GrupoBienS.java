@@ -5,8 +5,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,14 +14,9 @@ public class GrupoBienS implements Serializable {
 
 	private static final long serialVersionUID = -869429871154743351L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	@Column(name="TIPO_BIEN")
-	private String BS_tipobien;
-	@Column(name="GRUPO_BIEN")
-	private String BS_grupobien;
+	@Id @Column(name="TIPO_BIEN")	private String BS_tipobien;
+	@Column(name="GRUPO_BIEN")	private String BS_grupobien;
+		
 	@Column(name="NOMBRE_GRUPO")
 	private String BS_gruponombre;
 	@Column(name="ALCANCE_GRUPO")
@@ -48,12 +41,8 @@ public class GrupoBienS implements Serializable {
 	private String BS_flagvisua;
 	@Column(name="FLAG_EXCEPCION")
 	private String BS_flagexcep;
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+
+	
 	public String getBS_tipobien() {
 		return BS_tipobien;
 	}

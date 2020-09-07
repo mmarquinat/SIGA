@@ -16,12 +16,10 @@ public class SagAccCm implements Serializable{
 	
 	private static final long serialVersionUID = -1606894697532819698L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "CACM_CODIGO")
 	private String CMcodigo;
+	
 	@Column(name = "CACM_DESCRI")
 	private String CMdescri;
 	@Column(name = "CACM_TIPENT")
@@ -39,12 +37,14 @@ public class SagAccCm implements Serializable{
 	@Column(name = "CACM_USUMOD")
 	private String CMusumod;
 	
+	/*
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
+	*/
 	public String getCACMcodigo() {
 		return CMcodigo;
 	}

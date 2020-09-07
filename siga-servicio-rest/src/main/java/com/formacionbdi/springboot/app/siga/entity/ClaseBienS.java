@@ -1,31 +1,20 @@
 package com.formacionbdi.springboot.app.siga.entity;
-
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
 @Table(name = "clase_bien_serv")
 public class ClaseBienS implements Serializable{
 
-	private static final long serialVersionUID = 4346284932915116340L;
+	private static final long serialVersionUID = 8742039005752763207L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	@Id @Column(name = "CCBS_TIPO_BIEN") private String var1;
+	@Column(name = "CCBS_GRUPO_BIEN") private String var2;
+	@Column(name = "CCBS_CLASE_BIEN") private String var3;
 	
-	@Column(name = "CCBS_TIPO_BIEN")
-	private String ccbs_tipo_bien;
-	@Column(name = "CCBS_GRUPO_BIEN")
-	private String ccbs_grupo_bien;
-	@Column(name = "CCBS_CLASE_BIEN")
-	private String ccbs_clase_bien;
 	@Column(name = "NOMBRE_CLASE")
 	private String nombre_clase;
 	@Column(name = "ALCANCE_CLASE")
@@ -54,29 +43,25 @@ public class ClaseBienS implements Serializable{
 	private String ccbs_enviado;
 	@Column(name = "CCBS_FLAG_VISUALIZA")
 	private String ccbs_flag_visualiza;
-	public Long getId() {
-		return id;
+	
+	
+	public String getVar1() {
+		return var1;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setVar1(String var1) {
+		this.var1 = var1;
 	}
-	public String getCcbs_tipo_bien() {
-		return ccbs_tipo_bien;
+	public String getVar2() {
+		return var2;
 	}
-	public void setCcbs_tipo_bien(String ccbs_tipo_bien) {
-		this.ccbs_tipo_bien = ccbs_tipo_bien;
+	public void setVar2(String var2) {
+		this.var2 = var2;
 	}
-	public String getCcbs_grupo_bien() {
-		return ccbs_grupo_bien;
+	public String getVar3() {
+		return var3;
 	}
-	public void setCcbs_grupo_bien(String ccbs_grupo_bien) {
-		this.ccbs_grupo_bien = ccbs_grupo_bien;
-	}
-	public String getCcbs_clase_bien() {
-		return ccbs_clase_bien;
-	}
-	public void setCcbs_clase_bien(String ccbs_clase_bien) {
-		this.ccbs_clase_bien = ccbs_clase_bien;
+	public void setVar3(String var3) {
+		this.var3 = var3;
 	}
 	public String getNombre_clase() {
 		return nombre_clase;

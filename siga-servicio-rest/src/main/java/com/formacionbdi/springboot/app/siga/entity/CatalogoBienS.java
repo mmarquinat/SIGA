@@ -1,37 +1,23 @@
 package com.formacionbdi.springboot.app.siga.entity;
-
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
 @Table(name = "catalogo_bien_serv")
 public class CatalogoBienS implements Serializable{
+
+	private static final long serialVersionUID = -2245056485189988269L;
 	
-	private static final long serialVersionUID = 8830465643714731763L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
-	@Column(name = "NCAT_SEC_EJEC")
-	private String ncat_sec_ejec;
-	@Column(name = "CCAT_TIPO_BIEN")
-	private String ccat_tipo_bien;
-	@Column(name = "CCAT_GRUPO_BIEN")
-	private String ccat_grupo_bien;
-	@Column(name = "CCAT_CLASE_BIEN")
-	private String ccat_clase_bien;
-	@Column(name = "CCAT_FAMILIA_BIEN")
-	private String ccat_familia_bien;
-	@Column(name = "ITEM_BIEN")
-	private String item_bien;
+	@Id @Column(name = "NCAT_SEC_EJEC") 	private String var1;
+	@Column(name = "CCAT_TIPO_BIEN") 	private String var2;
+	@Column(name = "CCAT_GRUPO_BIEN")	private String var3;
+	@Column(name = "CCAT_CLASE_BIEN")	private String var4;
+	@Column(name = "CCAT_FAMILIA_BIEN")	private String var5;
+	@Column(name = "ITEM_BIEN") 		private String var6;
+	
 	@Column(name = "NOMBRE_ITEM")
 	private String nombre_item;
 	@Column(name = "CCAT_FLAG_ACTIVO")
@@ -146,47 +132,41 @@ public class CatalogoBienS implements Serializable{
 	private String ncat_nro_orden;
 	@Column(name = "NCAT_TIPO_PPTO")
 	private String ncat_tipo_ppto;
-	public Long getId() {
-		return id;
+	public String getVar1() {
+		return var1;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setVar1(String var1) {
+		this.var1 = var1;
 	}
-	public String getNcat_sec_ejec() {
-		return ncat_sec_ejec;
+	public String getVar2() {
+		return var2;
 	}
-	public void setNcat_sec_ejec(String ncat_sec_ejec) {
-		this.ncat_sec_ejec = ncat_sec_ejec;
+	public void setVar2(String var2) {
+		this.var2 = var2;
 	}
-	public String getCcat_tipo_bien() {
-		return ccat_tipo_bien;
+	public String getVar3() {
+		return var3;
 	}
-	public void setCcat_tipo_bien(String ccat_tipo_bien) {
-		this.ccat_tipo_bien = ccat_tipo_bien;
+	public void setVar3(String var3) {
+		this.var3 = var3;
 	}
-	public String getCcat_grupo_bien() {
-		return ccat_grupo_bien;
+	public String getVar4() {
+		return var4;
 	}
-	public void setCcat_grupo_bien(String ccat_grupo_bien) {
-		this.ccat_grupo_bien = ccat_grupo_bien;
+	public void setVar4(String var4) {
+		this.var4 = var4;
 	}
-	public String getCcat_clase_bien() {
-		return ccat_clase_bien;
+	public String getVar5() {
+		return var5;
 	}
-	public void setCcat_clase_bien(String ccat_clase_bien) {
-		this.ccat_clase_bien = ccat_clase_bien;
+	public void setVar5(String var5) {
+		this.var5 = var5;
 	}
-	public String getCcat_familia_bien() {
-		return ccat_familia_bien;
+	public String getVar6() {
+		return var6;
 	}
-	public void setCcat_familia_bien(String ccat_familia_bien) {
-		this.ccat_familia_bien = ccat_familia_bien;
-	}
-	public String getItem_bien() {
-		return item_bien;
-	}
-	public void setItem_bien(String item_bien) {
-		this.item_bien = item_bien;
+	public void setVar6(String var6) {
+		this.var6 = var6;
 	}
 	public String getNombre_item() {
 		return nombre_item;
