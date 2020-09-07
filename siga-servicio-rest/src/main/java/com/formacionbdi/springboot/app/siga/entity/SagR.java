@@ -1,26 +1,19 @@
 package com.formacionbdi.springboot.app.siga.entity;
-
-import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "sag_rrhh")
-public class SagR implements Serializable{
-		
-	private static final long serialVersionUID = 2674679338584223525L;
+@IdClass(SagRId.class)
+public class SagR {
 
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "CORD_CODIGO")
-	private String COcodigo;
-	@Column(name = "CPER_CODIGO")
-	private String CPcodigo;
+	@Id @Column(name = "CORD_CODIGO") private String COcodigo;
+	@Id @Column(name = "CPER_CODIGO") private String CPcodigo;
+	
 	@Column(name = "DRHU_INIPRO")
 	private Date DRinipro;
 	@Column(name = "DRHU_FINPRO")

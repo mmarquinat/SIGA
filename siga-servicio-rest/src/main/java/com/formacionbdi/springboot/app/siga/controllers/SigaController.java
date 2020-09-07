@@ -65,10 +65,6 @@ public class SigaController {
 	@GetMapping("/listar-familia-bien-serv/prueba/{var1}/{var2}/{var3}/{var4}")
 	public FamiliaBienS detailFBS(@PathVariable String fbs1, @PathVariable String fbs2, 
 			@PathVariable String fbs3, @PathVariable String fbs4){
-		System.out.println(fbs1);
-		System.out.println(fbs2);
-		System.out.println(fbs3);
-		System.out.println(fbs4);
 		return restFBSService.findByFBS(fbs1, fbs2, fbs3, fbs4);
 	}	
 	/*******************************************************************************************************************************************
@@ -112,7 +108,7 @@ public class SigaController {
 	
 	@Autowired
 	private IS_SagAccCm_Service restCmService;
-	@GetMapping("/listar-sag-acc-com/")
+	@GetMapping("/listar-sag-acc-com")
 	public List<SagAccCm> detailCm(){
 		return restCmService.findAll().stream().collect(Collectors.toList());
 	}
@@ -148,13 +144,13 @@ public class SigaController {
 	@Autowired
 	private IS_SagR_Service restRService;
 	@GetMapping("/listar-sag-rrhh")
-	public List<SagR> listarR(){
-		return restRService.findAll().stream().collect(Collectors.toList());
+	public Iterable<SagR> listarR(){
+		return restRService.findAll();
 	}
 
-	@GetMapping("/listar-sag-rrhh/{id}")
-	public SagR detailR(@PathVariable String id) {
-		return restRService.findById(id);
+	@GetMapping("/listar-sag-rrhh/{id1}/{id2}")
+	public SagR detailR(@PathVariable String id1, @PathVariable String id2) {
+		return restRService.findByR(id1, id2);
 	}
 	
 	/*******************************************************************************************************************************************
@@ -181,17 +177,28 @@ public class SigaController {
 	
 	@GetMapping("/")
 	public String test() {
+		String var;
+		var = "10001";
 		return "  Lista Servicios  \n"
 				+ "*******************\n"
-				+ "/listar-catalogo-bien-serv\n"
-				+ "/listar-clase-bien-serv\n"
-				+ "/listar-familia-bien-serv\n"
-				+ "/listar-grupo-bien-serv\n"
-				+ "/listar-sag-acc-com\n"
-				+ "/listar-sag-acc-con\n"
-				+ "/listar-sag-ordenes\n"
-				+ "/listar-sag-rrhh\n"
-				+ "/listar-unidad-medida\n";
+				+ "http://localhost:"+var+"/listar-catalogo-bien-serv\n"
+					+ "\thttp://localhost:"+var+"/listar-catalogo-bien-serv/var1/var2/var3/var4/var5/var6\n"
+				+ "http://localhost:"+var+"/listar-clase-bien-serv\n"
+					+ "\thttp://localhost:"+var+"/listar-clase-bien-serv/var1/var2/var3\n"
+				+ "http://localhost:"+var+"/listar-familia-bien-serv\n"
+					+ "\thttp://localhost:"+var+"/listar-familia-bien-serv/var1/var2/var3/var4\n"
+				+ "http://localhost:"+var+"/listar-grupo-bien-serv\n"
+					+ "\thttp://localhost:"+var+"/listar-grupo-bien-serv/TIPO_BIEN/GRUPO_BIEN\n"
+				+ "http://localhost:"+var+"/listar-sag-acc-com\n"
+					+ "\thttp://localhost:"+var+"/listar-sag-acc-com/CACM_CODIGO\n"
+				+ "http://localhost:"+var+"/listar-sag-acc-con\n"
+					+ "\thttp://localhost:"+var+"/listar-sag-acc-con/CACN_CODIGO\n"
+				+ "http://localhost:"+var+"/listar-sag-ordenes\n"
+					+ "\thttp://localhost:"+var+"/listar-sag-ordenes/CORD_CODIGO\n"
+				+ "http://localhost:"+var+"/listar-sag-rrhh\n"
+					+ "\thttp://localhost:"+var+"/listar-sag-rrhh/CORD_CODIGO/CPER_CODIGO\n"
+				+ "http://localhost:"+var+"/listar-unidad-medida\n"
+					+ "\thttp://localhost:"+var+"/listar-unidad-medida/UNIDAD_MEDIDA\n";
 	}
 	
 }

@@ -1,6 +1,7 @@
 package com.formacionbdi.springboot.app.siga.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,13 +18,13 @@ public class S_SagR_ServiceImpl implements IS_SagR_Service{
 	
 	@Override
 	@Transactional(readOnly = true)
-	public List<SagR> findAll() {
-		return (List<SagR>) sigaRDao.findAll();
+	public Iterable<SagR> findAll() {
+		return (Iterable<SagR>) sigaRDao.findAll();
 	}
 	
 	@Override
 	@Transactional(readOnly = true)
-	public SagR findById(String id) {
-		return sigaRDao.findById(id).orElse(null);
+	public SagR findByR(String id1, String id2) {
+		return (SagR) sigaRDao.findByR(id1, id2);
 	}
 }
